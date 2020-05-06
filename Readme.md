@@ -14,7 +14,7 @@ Then add ipadOSCursor.css to the head tag
 </head>
 ```
 
-Add and ipadOSCursor.js to the end of body tag
+Add ipadOSCursor.js to the end of body tag
 ```html
 <body>
   <!-- your awesome code -->
