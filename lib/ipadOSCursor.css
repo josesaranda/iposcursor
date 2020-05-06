@@ -1,5 +1,5 @@
 * {
-  cursor:none !important;
+  cursor: none !important;
 }
 
 .highlight {
@@ -12,7 +12,7 @@
   margin: 6px;
 }
 
-.highlight[data-highlight="true"] {
+.highlight:hover {
   background: rgba(239, 239, 239, 0.8);
   transition: all 0.2s;
   transform: scale(1.05);
