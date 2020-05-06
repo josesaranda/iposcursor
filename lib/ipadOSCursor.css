@@ -1,0 +1,29 @@
+* {
+  cursor:none !important;
+}
+
+.highlight {
+  padding: 10px;
+  line-height: 10px;
+  background: transparent;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.2s;
+  margin: 6px;
+}
+
+.highlight[data-highlight="true"] {
+  background: rgba(239, 239, 239, 0.8);
+  transition: all 0.2s;
+  transform: scale(1.05);
+}
+
+#ipadOSCursor {
+  z-index: 9999;
+  background: grey;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  transition: opacity 0.4s;
+}
