@@ -2,7 +2,7 @@
 
 Simple implementation of ipadOS 13.4 cursor built in Javascript.
 
-### Instalation
+### Instalation  
 
 Add `lib` folder to your project.
 
@@ -23,7 +23,7 @@ Add and ipadOSCursor.js to the end of body tag
 </body>
 ```
 
-### Usage
+### Usage  
 
 Call function createIpadOSCursor
 ```javascript
