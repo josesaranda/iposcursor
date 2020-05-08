@@ -2,6 +2,8 @@
 
 Simple implementation of ipadOS 13.4 cursor built in Javascript.
 
+[See Demo](https://codepen.io/josesaranda/pen/oNjEWwb) (only  desktop browser)
+
 ### Instalation  
 
 Add `lib` folder to your project.
