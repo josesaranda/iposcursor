@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ipadOS 13.4 Cursor</title>
+  <link rel="stylesheet" href="../../dist/css/IpadOSCursor.min.css">
+  <style>
+    body {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body id="body">
+  <!-- important example code -->
+  <p> Open this with a desktop browser </p>
+  <a class="highlight" href="https://github.com/josesaranda/ipadOSCursor" target="_blank">Go to Github</a>
+  <div class="highlight">Hello i'm a div element</div>
+  <button class="highlight" onclick="toggle()">Click me to toogle cursor</button>
+  <!-- end of important example code -->
+  <script src="../../dist/ipadOSCursor.umd.js"></script>
+  <script>
+    let { IpadOSCursor } = ipadOSCursor; 
+    let cursor = new IpadOSCursor({element : 'body'});
+    cursor.suscribe();
+    let enable = true;
+    function toggle(){
+      enable = !enable;
+      if(enable)
+        cursor.suscribe();
+      else
+        cursor.unsuscribe();
+    }
+  </script>
+</body>
+</html>
