@@ -27,7 +27,17 @@ Add ipadOSCursor.js to the end of body tag
 
 ### Usage  
 
-Call function createIpadOSCursor
+Call function create and suscribe
 ```javascript
-createIpadOSCursor();
+let cursor = IpadOSCursor.create({element : 'elementId'});
+cursor.suscribe();
+// or
+new IpadOSCursor({element : 'elementId'});
+```
+
+Call function unsuscribe to remove cursor
+```javascript
+// ...
+// your awesome cursor code behind
+cursor.unsuscribe();
 ```

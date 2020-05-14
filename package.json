@@ -12,8 +12,9 @@
   "scripts": {
     "build": "tsc && npm run build:umd && npm run build:less",
     "build:less": "lessc ./src/less/* ./dist/css/IpadOSCursor.min.css -x",
-    "build:umd": "parcel build -d dist src/lib/IpadOSCursor.ts --out-file ipadOSCursor.umd.js --global ipadOSCursor",
+    "build:umd": "parcel build -d dist src/lib/IpadOSCursor.ts --out-file ipadOSCursor.umd.js --global IpadOSCursor",
     "demo": "npm run build && cd example/parcel/ && parcel index.html",
+    "prepublish" : "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

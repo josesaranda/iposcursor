@@ -1,4 +1,4 @@
-type Options = {
+export type Options = {
   element : string | HTMLElement;
 };
 
@@ -11,6 +11,10 @@ export class IpadOSCursor {
   constructor(
     private options : Options
   ){}
+
+  static create(options : Options){
+    return new IpadOSCursor(options);
+  }
 
   /**
    * Set mouse position to element
@@ -94,10 +98,12 @@ export class IpadOSCursor {
   }
 }
 
+export const create = (options : Options) => new IpadOSCursor(options);
+
 function addClass(name : string, element : HTMLElement) : void{
   let className = element.className ? element.className.split(' ') : [];
   className.push(name);
-  element.setAttribute('class',''+className.join(' '));
+  element.setAttribute('class',className.join(' '));
 }
 
 function removeClass(name : string, element : HTMLElement) : void{
@@ -105,6 +111,6 @@ function removeClass(name : string, element : HTMLElement) : void{
   let index = className.findIndex((klass : string) => klass === name);
   if(index !== -1){
     className.splice(index,1);
-    element.setAttribute('class',''+className.join(' '));
+    element.setAttribute('class',className.join(' '));
   }
 }
