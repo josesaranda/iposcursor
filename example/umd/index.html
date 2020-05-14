@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ipadOS 13.4 Cursor</title>
+  <link rel="stylesheet" href="../../dist/css/IpadOSCursor.min.css">
+  <style>
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    #bottom, #middle, #top {
+      padding: 10px;
+      border: 1px solid black;
+    }
+
+    /*Override highlight for section top*/
+    #top.IpadOSCursor .highlight{
+      color: blue;
+    }
+
+    #top.IpadOSCursor .cursor {
+      background: blue;
+    }
+
+    #top.IpadOSCursor .highlight:hover{
+      color: white;
+      background: blue;
+    }
+  </style>
+</head>
+<body>
+  <!-- important example code -->
+  <p> Open this with a desktop browser </p>
+  <div id="top">
+    <h4>Section with curstom override cursor and highlights</h4>
+    <a class="highlight" href="https://github.com/josesaranda/ipadOSCursor" target="_blank">Go to Github</a>
+    <div class="highlight">Hello i'm a div element</div>
+    <button class="highlight" onclick="toggleTop()">Click me to toogle cursor</button>
+  </div>
+  <div id="middle">
+    <h4>Section without cursor</h4>
+    <a class="highlight" href="https://github.com/josesaranda/ipadOSCursor" target="_blank">Go to Github</a>
+    <div class="highlight">Hello i'm a div element</div>
+  </div>
+  <div id="bottom">
+    <h4>Section with default cursor and highlights</h4>
+    <a class="highlight" href="https://github.com/josesaranda/ipadOSCursor" target="_blank">Go to Github</a>
+    <div class="highlight">Hello i'm a div element</div>
+    <button class="highlight" onclick="toggleBottom()">Click me to toogle cursor</button>
+  </div>
+  <!-- end of important example code -->
+  <script src="../../dist/ipadOSCursor.umd.js"></script>
+  <script>
+    let cursorTop = IpadOSCursor.create({element : 'top'});
+    cursorTop.suscribe();
+
+    let cursorBottom = IpadOSCursor.create({element : 'bottom'});
+    cursorBottom.suscribe();
+
+    let enableTop = true;
+    let enableBottom = true;
+
+    function toggleTop(){
+      enableTop = !enableTop;
+      if(enableTop)
+        cursorTop.suscribe();
+      else
+        cursorTop.unsuscribe();
+    }
+
+    function toggleBottom(){
+      enableBottom = !enableBottom;
+      if(enableBottom)
+        cursorBottom.suscribe();
+      else
+        cursorBottom.unsuscribe();
+    }
+  </script>
+</body>
+</html>
