@@ -2,12 +2,18 @@
   "name": "ipad-os-cursor",
   "version": "0.1.0",
   "description": "Simple implementation of ipadOS 13.4 cursor built in Javascript.",
-  "main": "lib/ipadOSCursor.js",
+  "main": "src/index.ts",
   "directories": {
     "example": "example",
-    "lib": "lib"
+    "dist": "dist"
   },
+  "module": "dist/src/index",
+  "types": "dist/src/index.d.ts",
   "scripts": {
+    "build": "tsc && npm run build:umd && npm run build:less",
+    "build:less": "lessc ./src/less/* ./dist/css/IpadOSCursor.min.css -x",
+    "build:umd": "parcel build -d dist src/lib/IpadOSCursor.ts --out-file ipadOSCursor.umd.js --global ipadOSCursor",
+    "demo": "npm run build && cd example/parcel/ && parcel index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,5 +30,10 @@
   "bugs": {
     "url": "https://github.com/josesaranda/ipadOSCursor/issues"
   },
-  "homepage": "https://github.com/josesaranda/ipadOSCursor#readme"
+  "homepage": "https://github.com/josesaranda/ipadOSCursor#readme",
+  "devDependencies": {
+    "less": "^3.11.1",
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^3.9.2"
+  }
 }
