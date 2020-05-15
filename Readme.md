@@ -1,43 +1,41 @@
-# ipadOS 13.4 CursorJS
+# ipos-cursor an iPadOS 13.4 Cursor for the web
 
-Simple implementation of ipadOS 13.4 cursor built in Javascript.
+Simple implementation of iPadOS 13.4 Cursor built with web technologies.
 
-[See Demo](https://codepen.io/josesaranda/pen/oNjEWwb) (only  desktop browser)
+[See Old Demo](https://codepen.io/josesaranda/pen/oNjEWwb) (only  desktop browser)
 
-### Instalation  
+### Instalation
 
-Add `lib` folder to your project.
-
-Then add ipadOSCursor.css to the head tag 
-```html
-<head>
-  <!-- your awesomes styles, meta, etc -->
-  <link rel="stylesheet" href="path/to/lib/ipadOSCursor.css">
-</head>
+```shell
+npm install ipos-cursor --save
 ```
 
-Add ipadOSCursor.js to the end of body tag
-```html
-<body>
-  <!-- your awesome code -->
-  <!-- ... -->
-  <script src="path/to/lib/ipadOSCursor.js"></script>
-</body>
-```
+### Usage
 
-### Usage  
+#### ES and TS modules
 
-Call function create and suscribe
-```javascript
-let cursor = IpadOSCursor.create({element : 'elementId'});
+```typescript
+import { IposCursor, create } from 'iposcursor';
+
+let cursor = new IposCursor({element : 'elementId'});
 cursor.suscribe();
 // or
-new IpadOSCursor({element : 'elementId'});
+let cursor = create({element : 'elementId'});
+cursor.suscribe();
 ```
 
-Call function unsuscribe to remove cursor
-```javascript
-// ...
-// your awesome cursor code behind
-cursor.unsuscribe();
+#### Browser
+
+```html
+<html>
+<head>
+  <!-- your awesomes styles, meta, etc -->
+  <link rel="stylesheet" href="node_modules/iposcursor/css/ipos-cursor.min.css">
+</head>
+  <body>
+  <!-- your awesome code -->
+  <!-- ... -->
+  <script src="node_modules/iposcursor/ipos-cursor.min.js"></script>
+  </body>
+<html>
 ```

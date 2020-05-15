@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ipadOS 13.4 Cursor</title>
-  <link rel="stylesheet" href="../../dist/css/IpadOSCursor.min.css">
+  <title>iposcursor | browser</title>
+  <link rel="stylesheet" href="../../dist/css/ipos-cursor.min.css">
   <style>
     * {
       font-family: Arial, Helvetica, sans-serif;
@@ -15,15 +15,15 @@
     }
 
     /*Override highlight for section top*/
-    #top.IpadOSCursor .highlight{
+    #top.ipos .ipos-highlight{
       color: blue;
     }
 
-    #top.IpadOSCursor .cursor {
+    #top.ipos .ipos-cursor {
       background: blue;
     }
 
-    #top.IpadOSCursor .highlight:hover{
+    #top.ipos .ipos-highlight:hover{
       color: white;
       background: blue;
     }
@@ -34,28 +34,28 @@
   <p> Open this with a desktop browser </p>
   <div id="top">
     <h4>Section with curstom override cursor and highlights</h4>
-    <a class="highlight" href="https://github.com/josesaranda/ipadOSCursor" target="_blank">Go to Github</a>
-    <div class="highlight">Hello i'm a div element</div>
-    <button class="highlight" onclick="toggleTop()">Click me to toogle cursor</button>
+    <a class="ipos-highlight" href="https://github.com/josesaranda/ipadOSCursor" target="_blank">Go to Github</a>
+    <div class="ipos-highlight">Hello i'm a div element</div>
+    <button class="ipos-highlight" onclick="toggleTop()">Click me to toogle cursor</button>
   </div>
   <div id="middle">
     <h4>Section without cursor</h4>
-    <a class="highlight" href="https://github.com/josesaranda/ipadOSCursor" target="_blank">Go to Github</a>
-    <div class="highlight">Hello i'm a div element</div>
+    <a class="ipos-highlight" href="https://github.com/josesaranda/ipadOSCursor" target="_blank">Go to Github</a>
+    <div class="ipos-highlight">Hello i'm a div element</div>
   </div>
   <div id="bottom">
     <h4>Section with default cursor and highlights</h4>
-    <a class="highlight" href="https://github.com/josesaranda/ipadOSCursor" target="_blank">Go to Github</a>
-    <div class="highlight">Hello i'm a div element</div>
-    <button class="highlight" onclick="toggleBottom()">Click me to toogle cursor</button>
+    <a class="ipos-highlight" href="https://github.com/josesaranda/ipadOSCursor" target="_blank">Go to Github</a>
+    <div class="ipos-highlight">Hello i'm a div element</div>
+    <button class="ipos-highlight" onclick="toggleBottom()">Click me to toogle cursor</button>
   </div>
   <!-- end of important example code -->
-  <script src="../../dist/ipadOSCursor.umd.js"></script>
+  <script src="../../dist/ipos-cursor.min.js"></script>
   <script>
-    let cursorTop = IpadOSCursor.create({element : 'top'});
+    let cursorTop = iposcursor.create({element : 'top'});
     cursorTop.suscribe();
 
-    let cursorBottom = IpadOSCursor.create({element : 'bottom'});
+    let cursorBottom = iposcursor.create({element : 'bottom'});
     cursorBottom.suscribe();
 
     let enableTop = true;
