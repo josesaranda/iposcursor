@@ -7,7 +7,7 @@ Simple implementation of iPadOS 13.4 Cursor built with web technologies.
 ### Instalation
 
 ```shell
-npm install ipos-cursor --save
+npm install iposcursor --save
 ```
 
 ### Usage
