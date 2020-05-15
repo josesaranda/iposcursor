@@ -2,7 +2,7 @@ export type Options = {
   element : string | HTMLElement;
 };
 
-export class IpadOSCursor {
+export class IposCursor {
 
   private parentElement? : HTMLElement;
   private cursorElement? : HTMLElement;
@@ -13,7 +13,7 @@ export class IpadOSCursor {
   ){}
 
   static create(options : Options){
-    return new IpadOSCursor(options);
+    return new IposCursor(options);
   }
 
   /**
@@ -44,13 +44,13 @@ export class IpadOSCursor {
 
     // Create cursor element
     this.cursorElement = document.createElement('div');
-    addClass('cursor',this.cursorElement);
+    addClass('ipos-cursor',this.cursorElement);
 
     // Append cursorElement to parent element
     this.parentElement.appendChild(this.cursorElement);
 
-    // IpadOSCursor class to parent element
-    addClass('IpadOSCursor', this.parentElement);
+    // ipos class to parent element
+    addClass('ipos', this.parentElement);
 
     // Add events listener to parent element
     this.parentElement.addEventListener('mousemove', event => {
@@ -67,7 +67,7 @@ export class IpadOSCursor {
     });
 
     // Add events listener to childs hightlights elements
-    this.highlightElements = this.parentElement.querySelectorAll('.highlight');
+    this.highlightElements = this.parentElement.querySelectorAll('.ipos-highlight');
     this.highlightElements.forEach(highlightElement => {
       highlightElement.addEventListener('mouseenter',() => {
         if(this.cursorElement)
@@ -82,7 +82,7 @@ export class IpadOSCursor {
 
   unsuscribe(){
     if(this.parentElement){
-      removeClass('IpadOSCursor',this.parentElement);
+      removeClass('ipos',this.parentElement);
       this.parentElement.removeChild(this.cursorElement!);
       this.highlightElements!.forEach(highlightElement => {
         highlightElement.removeEventListener('mouseenter',() => true);
@@ -98,7 +98,7 @@ export class IpadOSCursor {
   }
 }
 
-export const create = (options : Options) => new IpadOSCursor(options);
+export const create = (options : Options) => new IposCursor(options);
 
 function addClass(name : string, element : HTMLElement) : void{
   let className = element.className ? element.className.split(' ') : [];

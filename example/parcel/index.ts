@@ -1,4 +1,9 @@
-import { IpadOSCursor } from '../../dist/index';
+import * as iposcursor from '../../dist'
 
-let cursor = new IpadOSCursor({element : 'body'});
+let cursor = iposcursor.create({element : 'body'});
 cursor.suscribe();
+
+setTimeout(() => {
+  console.log('-- cursor unsuscribed --');
+  cursor.unsuscribe();
+},5000);

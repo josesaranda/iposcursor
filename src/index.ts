@@ -1,1 +1,1 @@
-export * from './lib/IpadOSCursor';
+export * from './lib/iposcursor';
