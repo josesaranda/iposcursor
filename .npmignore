@@ -3,5 +3,5 @@ node_modules
 package-lock.json
 .cache
 example
-src
+src/*
 tsconfig.json
