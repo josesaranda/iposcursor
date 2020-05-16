@@ -1,12 +1,13 @@
 {
   "name": "iposcursor",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Simple implementation of ipadOS 13.4 cursor built in Javascript.",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "directories": {
     "example": "example",
     "dist": "dist"
   },
+  "files" : ["dist"],
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
