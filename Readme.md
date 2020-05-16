@@ -1,4 +1,4 @@
-# ipos-cursor an iPadOS 13.4 Cursor for the web
+# iposcursor an iPadOS 13.4 Cursor for the web
 
 Simple implementation of iPadOS 13.4 Cursor built with web technologies.
 
@@ -30,12 +30,12 @@ cursor.suscribe();
 <html>
 <head>
   <!-- your awesomes styles, meta, etc -->
-  <link rel="stylesheet" href="node_modules/iposcursor/css/ipos-cursor.min.css">
+  <link rel="stylesheet" href="node_modules/iposcursor/css/iposcursor.min.css">
 </head>
   <body>
   <!-- your awesome code -->
   <!-- ... -->
-  <script src="node_modules/iposcursor/ipos-cursor.min.js"></script>
+  <script src="node_modules/iposcursor/iposcursor.min.js"></script>
   </body>
 <html>
 ```

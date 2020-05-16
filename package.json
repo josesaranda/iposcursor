@@ -11,10 +11,10 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc && npm run build:umd && npm run build:less",
-    "build:less": "lessc ./src/less/* ./dist/css/ipos-cursor.min.css -x",
-    "build:umd": "parcel build -d dist src/index.ts --out-file ipos-cursor.min.js --global iposcursor",
+    "build:less": "lessc ./src/less/* ./dist/css/iposcursor.min.css -x",
+    "build:umd": "parcel build -d dist src/index.ts --out-file iposcursor.min.js --global iposcursor",
     "demo": "npm run build && cd example/parcel/ && parcel index.html",
-    "prepublish" : "npm run build",
+    "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
