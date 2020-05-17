@@ -4,7 +4,7 @@ Simple implementation of iPadOS 13.4 Cursor built with web technologies.
 
 [See Demo](https://codepen.io/josesaranda/pen/oNjEWwb) (only  desktop browser)
 
-### Instalation
+### Installation
 
 #### From NPM
 
