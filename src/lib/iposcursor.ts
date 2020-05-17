@@ -1,3 +1,5 @@
+import { removeClass, addClass } from "./utils";
+
 export type Options = {
   element : string | HTMLElement;
 };
@@ -99,18 +101,3 @@ export class IposCursor {
 }
 
 export const create = (options : Options) => new IposCursor(options);
-
-function addClass(name : string, element : HTMLElement) : void{
-  let className = element.className ? element.className.split(' ') : [];
-  className.push(name);
-  element.setAttribute('class',className.join(' '));
-}
-
-function removeClass(name : string, element : HTMLElement) : void{
-  let className = element.className.split(' ');
-  let index = className.findIndex((klass : string) => klass === name);
-  if(index !== -1){
-    className.splice(index,1);
-    element.setAttribute('class',className.join(' '));
-  }
-}
